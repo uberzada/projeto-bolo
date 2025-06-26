@@ -1,0 +1,161 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== VARIÁVEIS DE COR ========== */
+:root {
+  --rosa-claro: #ffe4e1;
+  --marrom-claro: #a0522d;
+  --bege: #fff5e1;
+  --rosa-escuro: #d0707b;
+  --branco: #ffffff;
+}
+
+/* ========== BODY ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bege);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========== HEADER ========== */
+.header {
+  background-color: var(--rosa-claro);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: var(--marrom-claro);
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--marrom-claro);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--rosa-escuro);
+}
+
+/* ========== INTRO ========== */
+.intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--branco);
+}
+
+.intro h2 {
+  font-size: 1.8rem;
+  color: var(--marrom-claro);
+  margin-bottom: 1rem;
+}
+
+/* ========== PRODUTOS ========== */
+.produtos {
+  padding: 2rem;
+  text-align: center;
+}
+
+.produtos h2 {
+  font-size: 1.6rem;
+  color: var(--marrom-claro);
+  margin-bottom: 1.5rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.bolo {
+  background-color: var(--branco);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.bolo:hover {
+  transform: scale(1.02);
+}
+
+.bolo img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.bolo h3 {
+  color: var(--rosa-escuro);
+  margin-bottom: 0.5rem;
+}
+
+.bolo .preco {
+  font-weight: bold;
+  color: var(--marrom-claro);
+  margin: 0.5rem 0;
+}
+
+.bolo button {
+  background-color: var(--rosa-escuro);
+  color: var(--branco);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bolo button:hover {
+  background-color: var(--marrom-claro);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: var(--rosa-claro);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer a {
+  color: var(--marrom-claro);
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========== RESPONSIVO EXTRA ========== */
+@media (max-width: 500px) {
+  .menu ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .header {
+    align-items: flex-start;
+  }
+}
